@@ -36,14 +36,17 @@ while resp != "0":
     print("##### 3 - Alterar Dados do Produto   #####")
     print("##### 4 - Excluir Produto            #####")
     print("##### 0 - Retornar ao Menu Principal   #####")
-    resp2 = input("##### Escolha sua opção: ")
-    print()
+    resp2 = int(input("##### Escolha sua opção: "))
+
     if resp2 == 1:
       produtos_cadastrados = produtos.cadastrar_produto(produtos_cadastrados)
     elif resp2 == 2:
       produtos.listar_produtos(produtos_cadastrados)
+    elif resp2 == 3:
+      produtos.atualizar_produto(produtos_cadastrados)
+    elif resp2 == 4:
+      produtos.remover_produto(produtos_cadastrados)
 
-    input("Tecle <ENTER> para continuar...")
   elif resp == "3":
     print()
     print("PRODUTOS")
@@ -58,17 +61,3 @@ while resp != "0":
     input("Tecle <ENTER> para continuar...")
 
 print("FIM DO PROGRAMA")
-
-#produtos.listar_produtos("01", produtos_teste)
-print("cadastrar")
-produtos_cadastrados = produtos.cadastrar_produto(produtos_cadastrados)
-print("produtos", produtos_cadastrados)
-print("listar")
-produtos.listar_produtos(produtos_cadastrados)
-print("remover")
-produtos.remover_produto(11111)
-print("listar")
-produtos.listar_produtos(produtos_cadastrados)
-"""
-
-"""
