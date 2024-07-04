@@ -10,10 +10,10 @@ import Clientes
 
 produtos_cadastrados = {}
 clientes_cadastrados = {}
+vendas = {}
 resp = ""
 
-while resp != "0":
-  os.system("clear")
+def menu_principal():
   print("#############################")
   print("### LOJA DE CONVENIÊNCIA ####")
   print("#### 1 - CLIENTES       #####")
@@ -23,10 +23,14 @@ while resp != "0":
   print("#### 5 - INFORMAÇÕES    #####")
   print("#### 0 - SAIR           #####")
   resp = input("#### ESCOLHA A SUA OPÇÃO: ")
+  return resp
+
+while resp != "0":
+  os.system("clear")
+  resp = menu_principal()
 
   if resp == "1":
-    resp1 = int(input("##### Escolha sua opção: "))
-
+    resp1 = Clientes.menu_clientes()
     if resp1 == 1:
       clientes_cadastrados = Clientes.cadastrar_cliente(clientes_cadastrados)
     elif resp1 == 2:
@@ -37,8 +41,7 @@ while resp != "0":
       Clientes.remover_cliente(clientes_cadastrados)
 
   elif resp == "2":
-    produtos.menu_produtos()
-    resp2 = int(input("##### Escolha sua opção: "))
+    resp2 = produtos.menu_produtos()
 
     if resp2 == 1:
       produtos_cadastrados = produtos.cadastrar_produto(produtos_cadastrados)

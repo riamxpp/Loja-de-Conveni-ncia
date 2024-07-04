@@ -6,6 +6,7 @@ categorias_produtos = {
 }
 import os
 
+
 def menu_produtos():
   print()
   print("############################################")
@@ -16,6 +17,10 @@ def menu_produtos():
   print("##### 3 - Alterar Dados do Produto   #####")
   print("##### 4 - Excluir Produto            #####")
   print("##### 0 - Retornar ao Menu Principal   #####")
+
+  resposta = int(input("##### Escolha sua opção: "))
+  return resposta
+
 
 def pega_categoria_produto():
   categoria = int(

@@ -1,5 +1,6 @@
 import os
 
+
 def menu_clientes():
   print()
   print("############################################")
@@ -10,6 +11,9 @@ def menu_clientes():
   print("##### 3 - Alterar Dados do Cliente     #####")
   print("##### 4 - Excluir Cliente              #####")
   print("##### 0 - Retornar ao Menu Principal   #####")
+
+  resp2 = int(input("##### Escolha sua opção: "))
+  return resp2
 
 def cadastrar_cliente(clientes):
   os.system('clear')
@@ -29,6 +33,7 @@ def cadastrar_cliente(clientes):
 
   input("Tecle <ENTER> para continuar...")
   return clientes
+
 
 def listar_clientes(clientes):
   os.system('clear')
@@ -50,6 +55,7 @@ def listar_clientes(clientes):
 
   input("Tecle <ENTER> para continuar...")
 
+
 def remover_cliente(clientes):
   os.system('clear')
   print()
@@ -66,6 +72,7 @@ def remover_cliente(clientes):
     print("Cpf não encontrado!\n")
 
   input("Tecle <ENTER> para continuar...")
+
 
 def atualizar_cliente(clientes):
   os.system('clear')
