@@ -6,8 +6,10 @@
 # INFORMAÇÕES
 import os
 import produtos
+import Clientes
 
 produtos_cadastrados = {}
+clientes_cadastrados = {}
 resp = ""
 
 while resp != "0":
@@ -23,19 +25,19 @@ while resp != "0":
   resp = input("#### ESCOLHA A SUA OPÇÃO: ")
 
   if resp == "1":
-    print()
-    print("CLIENTE")
-    input("Tecle <ENTER> para continuar...")
+    resp1 = int(input("##### Escolha sua opção: "))
+
+    if resp1 == 1:
+      clientes_cadastrados = Clientes.cadastrar_cliente(clientes_cadastrados)
+    elif resp1 == 2:
+      Clientes.listar_clientes(clientes_cadastrados)
+    elif resp1 == 3:
+      Clientes.atualizar_cliente(clientes_cadastrados)
+    elif resp1 == 4:
+      Clientes.remover_cliente(clientes_cadastrados)
+
   elif resp == "2":
-    print()
-    print("############################################")
-    print("#####         Módulo Produto         #####")
-    print("############################################")
-    print("##### 1 - Cadastrar Produto          #####")
-    print("##### 2 - Exibir Dados do Produto    #####")
-    print("##### 3 - Alterar Dados do Produto   #####")
-    print("##### 4 - Excluir Produto            #####")
-    print("##### 0 - Retornar ao Menu Principal   #####")
+    produtos.menu_produtos()
     resp2 = int(input("##### Escolha sua opção: "))
 
     if resp2 == 1:

@@ -6,6 +6,16 @@ categorias_produtos = {
 }
 import os
 
+def menu_produtos():
+  print()
+  print("############################################")
+  print("#####         Módulo Produto         #####")
+  print("############################################")
+  print("##### 1 - Cadastrar Produto          #####")
+  print("##### 2 - Exibir Dados do Produto    #####")
+  print("##### 3 - Alterar Dados do Produto   #####")
+  print("##### 4 - Excluir Produto            #####")
+  print("##### 0 - Retornar ao Menu Principal   #####")
 
 def pega_categoria_produto():
   categoria = int(
