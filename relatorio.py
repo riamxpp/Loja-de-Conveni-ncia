@@ -39,3 +39,32 @@ def lista_geral_clientes(clientes):
   print()
   input("Tecle <ENTER> para continuar...")
 
+
+def lista_geral_produtos(produtos):
+  os.system('clear')
+  print()
+  print(
+      "##################################################################################"
+  )
+  print(
+      "######################      Relatório Geral de Produtos     ######################"
+  )
+  print(
+      "##################################################################################"
+  )
+  print(
+      "|-------------------|--------------|-------------------|---------------|"
+  )
+  print(
+      "|  Código de barra  |    Nome      |      Estoque      |     Preço     |"
+  )
+  print(
+      "|-------------------|--------------|-------------------|---------------|"
+  )
+  for produto in produtos.items():
+    print("| %-17s " % (produto[0]), end='')
+    print("| %-12s " % (produto[1][0]), end='')
+    print("| %-17s " % (produto[1][3]), end='')
+    print("| %-13s |" % (produto[1][1]))
+  print()
+  input("Tecle <ENTER> para continuar...")

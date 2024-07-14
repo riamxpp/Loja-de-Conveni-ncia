@@ -99,6 +99,7 @@ while resp != "0":
     if resp4 == 1:
       relatorio.lista_geral_clientes(storage.clientes_cadastrados)
     elif resp4 == 2:
+      relatorio.lista_geral_produtos(storage.produtos_cadastrados)
       print()
     elif resp4 == 3:
       print()
