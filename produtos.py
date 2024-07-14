@@ -33,6 +33,12 @@ def pega_categoria_produto():
   return categorias_produtos[categoria]
 
 
+def pegar_nome_produto(codigo_barra, produtos):
+  if codigo_barra in produtos:
+    return produtos[codigo_barra][0]
+  return False
+
+
 def cadastrar_produto(produtos):
   os.system('clear')
   print()
@@ -129,3 +135,9 @@ def atualizar_produto(produtos):
     print("Produto não encontrado!\n")
 
   input("Tecle <ENTER> para continuar...")
+
+
+def buscar_produto(codigo_barra, produtos):
+  if codigo_barra not in produtos:
+    return False
+  return produtos[codigo_barra]

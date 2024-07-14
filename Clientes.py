@@ -1,6 +1,5 @@
 import os
 
-
 def menu_clientes():
   print()
   print("############################################")
