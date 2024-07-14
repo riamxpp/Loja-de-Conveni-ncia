@@ -1,10 +1,12 @@
+import os
+
 categorias_produtos = {
     1: "Bebida",
     2: "Limpeza",
     3: "Alimento",
     4: "Congelados"
 }
-import os
+
 
 
 def menu_produtos():
@@ -141,3 +143,4 @@ def buscar_produto(codigo_barra, produtos):
   if codigo_barra not in produtos:
     return False
   return produtos[codigo_barra]
+

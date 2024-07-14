@@ -3,7 +3,30 @@ import produtos
 import Clientes
 import storage
 import vendas
-from datetime import datetime
+import pickle
+import storage
+import relatorio
+
+try:
+  arq_produtos = open("produtos.dat", "rb")
+  alunos = pickle.load(arq_produtos)
+except:
+  arq_produtos = open("produtos.dat", "wb")
+arq_produtos.close()
+
+try:
+  arq_clientes = open("Clientes.dat", "rb")
+  alunos = pickle.load(arq_clientes)
+except:
+  arq_clientes = open("Clientes.dat", "wb")
+arq_clientes.close()
+
+try:
+  arq_vendas = open("vendas.dat", "rb")
+  alunos = pickle.load(arq_vendas)
+except:
+  arq_vendas = open("vendas.dat", "wb")
+arq_vendas.close()
 
 id_vendas = 0
 resp = ""
@@ -72,7 +95,17 @@ while resp != "0":
     input("Tecle <ENTER> para continuar...")
   elif resp == "4":
     print()
-    print("RELATÓRIO")
+    resp4 = relatorio.menu_relat()
+    if resp4 == 1:
+      relatorio.lista_geral_clientes(storage.clientes_cadastrados)
+    elif resp4 == 2:
+      print()
+    elif resp4 == 3:
+      print()
+    elif resp4 == 4:
+      print()
+    elif resp4 == 5:
+      print()
     input("Tecle <ENTER> para continuar...")
   elif resp == "5":
     print()
@@ -80,3 +113,15 @@ while resp != "0":
     input("Tecle <ENTER> para continuar...")
 
 print("FIM DO PROGRAMA")
+
+arq_produtos = open("produtos.dat", "wb")
+pickle.dump(storage.produtos_cadastrados, arq_produtos)
+arq_produtos.close()
+
+arq_clientes = open("Clientes.dat", "wb")
+pickle.dump(storage.clientes_cadastrados, arq_clientes)
+arq_clientes.close()
+
+arq_vendas = open("vendas.dat", "wb")
+pickle.dump(storage.vendas_cadastradas, arq_vendas)
+arq_vendas.close()

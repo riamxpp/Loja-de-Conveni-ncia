@@ -8,15 +8,11 @@ produtos_cadastrados = {
 
 """
 #clientes[cpf] = [nome, genero, idade, cpf]
-clientes_cadastrados = {}
-"""
-  "12345": [
-    "Riam", "M", 23, "12345"
-  ],
-  "54321": [
-    "Diana", "F", 20, "22222"
-  ]
-"""
+clientes_cadastrados = {
+    "12345": ["Riam", "M", 23, "12345"],
+    "54321": ["Diana", "F", 20, "22222"]
+}
+
 #vendas[id] = [cliente, produtos_comprados, valor_compra, data, metodo_pagamento]
 vendas_cadastradas = {
     5: {
